@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form#theSearch(action="/search", method="get")
+    input(id="searchQuery", type="text",name="search")
+    input(type="submit", value="Submit")
+
+  #results
+    |Results go here:
